@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.strmln.ionstat.model.Facility" table="FACILITY">
+
+		<id name="facilityId" type="java.lang.Long" column="FACILITY_ID">
+			<generator class="native"></generator>
+		</id>
+
+		<property name="name" type="java.lang.String" column="NAME"
+			length="64" />
+
+		<property name="city" type="java.lang.String" column="CITY"
+			length="64" />
+
+		<property name="pib" type="java.lang.Long" column="PIB" />
+
+	</class>
+</hibernate-mapping> 
+
