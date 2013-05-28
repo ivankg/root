@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="css/main.css"> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--<script src="libs/jquery-1.10.0.min.js"></script>-->
+        <script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            if ($.browser.msie){
+                $('#menu ul.navmenu li:last-child .menutop').css('border-width','0 1px 1px;')
+            }
+
+            $('.toggle:not(.toggle-open)') .addClass('toggle-closed') .parents('li') .children('ul') .hide();    
+
+            $('.toggle') .click(function(){
+            if ($(this) .hasClass('toggle-open')) {
+                $(this) .removeClass('toggle-open') .addClass('toggle-closed') .empty('') .append('+') .parents('li') .children('ul') .slideUp(250);
+                $(this) .parent('.menutop') .removeClass('menutop-open') .addClass('menutop-closed');
+              }else{
+                $(this) .parent('.menutop') .removeClass('menutop-closed') .addClass('menutop-open');
+                $(this) .removeClass('toggle-closed') .addClass('toggle-open') .empty('') .append('&ndash;') .parents('li') .children('ul') .slideDown(250);
+            }
+            })
+            
+            $(".submenu").click(function(){
+                 var txt3=document.createElement("li");
+                 txt3.innerHTML="<a href=''>new Department</a>";  // Create text with DOM
+                 $(this).append(txt3);;
+            });
+        }); 
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                Header
+            </div>
+            <div id="content">
+                <div id="colOne">
+                   <div id="menu">
+                        <ul class="navmenu">
+                          <li><div class="menutop"><a href="#">Facility</a><div class="toggle">+</div></div>
+                            <ul class="submenu">
+                              <li><a href="#">Department</a></li>
+                              <li><a href="#">Add New</a></li>
+                            </ul>
+                          </li>
+                          <li><div class="menutop"><a href="#">Pages</a><div class="toggle">+</div></div>
+                            <ul class="submenu">
+                              <li><a href="#">Add New</a></li>
+                              <li><a href="#">Edit</a></li>
+                            </ul>
+                          </li>
+                          <li><div class="menutop menusingle"><a href="#">Comments</a></div></li>
+                          <li><div class="menutop"><a href="#">Users</a><div class="toggle">+</div></div>
+                            <ul class="submenu">
+                              <li><a href="#">Manage</a></li>
+                              <li><a href="#">Add New</a></li>
+                              <li><a href="#">Profile</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="colTwo">
+      feff              
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

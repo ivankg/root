@@ -1,0 +1,81 @@
+/* 
+    Document   : main
+    Created on : May 28, 2013, 8:57:12 PM
+    Author     : ARSA
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body { 
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper{
+    width: 980px;
+    margin: 0px auto;
+    background-color: yellow;
+}
+
+#header{
+  margin:0px;
+  width:800px;
+  background-image:url('images/header_bg.jpg');
+  background-repeat:repeat-x;
+}
+
+#content {
+  width: 980px;
+  margin: 0 auto;
+}
+
+#colOne {
+  float: left;
+  width: 296px;
+/*  margin:0 auto; 
+  background:white; 
+  border:1px solid #999; 
+  width:400px; 
+  padding:20px; 
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px; 
+  overflow:hidden;*/
+}
+
+#colTwo {
+  float: left;
+  width: 676px;
+  border: 2px solid red;
+}
+
+ /*Toggle Area*/
+ #menu {text-align:left;}
+ #menu .toggle {float:right;width:9px; padding:5px; cursor:pointer; border-top:1px solid white; border-left:1px solid #E0E0E0; color:#999;}
+ #menu ul.navmenu li:first-child .toggle{border-width:0 0 0 1px;}
+
+ /*Menu Setup*/
+ #menu ul{padding:0; margin:0; width:150px;}
+ #menu ul ul{border:1px solid #CCC;}
+ #menu ul.navmenu li {margin:0; list-style:none;}
+ /*Links*/
+ #menu ul.navmenu a, #menu ul.navmenu a:visited {text-decoration:none; padding:5px; display:block; color:#008FDD;}
+ #menu ul.navmenu ul.submenu a:hover{background:#FFF4D2; color:#333;}
+ /*Heading Outer div*/
+ #menu ul.navmenu .menutop{border:1px solid #CCC; border-width:0 1px; overflow:hidden; width:150px; background:#F9F9F9; }
+ /*Header Links*/
+ #menu ul.navmenu .menutop a{width:120px;float:left;margin:0 0 1px 0; border-top:1px solid white;}
+ /*Header Link Hover*/
+ #menu ul.navmenu .menutop a:hover{color:#333;}
+ /*Removes white border for the first header*/
+ #menu ul.navmenu li:first-child .menutop a {border-width:0px;}
+
+ /*Single Menu Width Fix*/
+ #menu ul.navmenu .menusingle a{width:140px;}
+
+ /*Border Radius and Special Border Width*/
+ #menu ul.navmenu li:first-child .menutop{border-width:1px 1px 0 1px; -moz-border-radius:5px 5px 0 0;-webkit-border-top-left-radius:5px;-webkit-border-top-right-radius:5px;}
+ #menu ul.navmenu li:last-child .menutop{border-width:0px 1px 1px 1px; -moz-border-radius:0 0 5px 5px; -webkit-border-bottom-left-radius:5px;-webkit-border-bottom-right-radius:5px;}
+ #menu ul.navmenu li:last-child ul.submenu{-moz-border-radius:0 0 5px 5px;-webkit-border-bottom-left-radius:5px;-webkit-border-bottom-right-radius:5px;}
+ #menu ul.navmenu li:last-child .menutop-open{-moz-border-radius:0;-webkit-border-radius:0px; border-width:0 1px;}
+ 
+ 
