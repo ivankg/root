@@ -1,0 +1,14 @@
+<Context sessionCookiePathUsesTrailingSlash="false">
+	<!-- mysql and log4jdbc driver -->
+	<!-- com.mysql.jdbc.Driver, net.sf.log4jdbc.DriverSpy -->
+
+	<Resource name="jdbc/ionstat" auth="Container"
+		type="com.mchange.v2.c3p0.ComboPooledDataSource" driverClass="net.sf.log4jdbc.DriverSpy"
+		jdbcUrl="jdbc:log4jdbc:mysql://localhost/ionstat?useUnicode=true&amp;characterEncoding=UTF8"
+		user="is" password="is" factory="org.apache.naming.factory.BeanFactory"
+		acquireIncrement="2" minPoolSize="10" maxPoolSize="200"
+		idleConnectionTestPeriod="100" maxStatements="0" checkoutTimeout="30000"
+		unreturnedConnectionTimeout="0" debugUnreturnedConnectionStackTraces="false" />
+
+	<Manager pathname="" />
+</Context>
